@@ -10,13 +10,13 @@
 
 .product-card{
     width: 350px;
+    max-width: 350px;
     height: 380px;
     background-color: #efefef;
     text-align: center;
     border-radius: 20px;
     overflow: hidden;
-    margin-top: 25px;
-    
+    margin-top: 25px;    
 }
 
 .product-card img{
@@ -46,7 +46,10 @@
 }
 
 @media screen and (max-width: 380px) {
-   .product-card{
-    width: 95%;
-   }
+    .product-card {
+        width: 95%;
+        height: auto;
+        margin-bottom: 360px;
+      }
+      
 }

@@ -63,6 +63,7 @@ nav p:hover:before {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 /* Your CSS styles */
