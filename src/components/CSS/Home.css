@@ -7,6 +7,8 @@ body{
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'Noto Serif Georgian', serif;
     font-weight: 700;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 header{
@@ -31,6 +33,7 @@ nav{
     border-radius: 30px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1)
 }
+/* underline animation on navbar texts */
 nav p{
     position: relative;
     color: #333;
@@ -51,4 +54,33 @@ nav p::before{
 
 nav p:hover:before{
     width: 100%;
+}
+
+.searchbar-container{
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar{
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 5px 6px 10px  rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+    font-size: 20px;
+    color: gray;
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+.search-bar::placeholder{
+    font-size: 18px;
+    opacity: 0.5;
 }

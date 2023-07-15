@@ -13,6 +13,12 @@ const Home = () => {
                     <p>კონტაქტი</p>
                 </nav>
             </header>
+
+            <main>
+                <div className='searchbar-container'>
+                    <input className='search-bar' type='text' placeholder='შეიყვანეთ საძიებო სიტყვა' />
+                </div>
+            </main>
         </>
      );
 }
