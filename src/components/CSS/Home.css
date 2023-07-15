@@ -1,86 +1,125 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Noto Serif Georgian', serif;
-    font-weight: 700;
-    overflow-x: hidden;
-    height: 100vh;
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Noto Serif Georgian", serif;
+  font-weight: 700;
+  overflow-x: hidden;
+  height: auto;
 }
 
-header{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 20px;
+header {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 20px;
 }
 
-nav{
-    width: 90%;
-    height: 50px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    border-radius: 30px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1)
+nav {
+  width: 90%;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  border-radius: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 /* underline animation on navbar texts */
-nav p{
-    position: relative;
-    color: #333;
-    text-decoration: none;
-    cursor: pointer;
+nav p {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-nav p::before{
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    height: 6px;
-    width: 0;
-    background-color: #4070f4;
-    border-radius: 50px;
-    transition: 0.5s ease;
+nav p::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  height: 6px;
+  width: 0;
+  background-color: #4070f4;
+  border-radius: 50px;
+  transition: 0.5s ease;
 }
 
-nav p:hover:before{
-    width: 100%;
+nav p:hover:before {
+  width: 100%;
 }
 
-.searchbar-container{
-    width: 100%;
-    height: 100px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.searchbar-container {
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-bar{
+/* Your CSS styles */
+.search-container {
+  position: relative;
+}
+
+.search-bar {
+    /* width + height */
+  width: 10px;
+  height: 42px;
+  /* border-radius */
+  border-radius: 50%;
+  border: 1px solid white;
+  /* box-shadow */
+  box-shadow: 0 0 25px blue;
+  /* paddings */
+  padding: 0 10px; /* Add padding for text on the left side */
+  padding-left: 23px; /* Add more left padding to make room for the icon */
+  /* font-size */
+  font-size: 18px;
+  /* background styles */
+  background-image: url("../../assets/searchicon.png"); /* URL of the search icon image */
+  background-repeat: no-repeat; /* Prevent the icon from repeating */
+  background-position: 10px center; /* Adjust the position of the icon inside the input field */
+  background-size: 20px 20px; /* Set the size of the icon */
+  /* transition and color of text */
+  transition: 0.6s all;
+  color: transparent;
+}
+
+.search-bar:hover{
     width: 70%;
-    height: 50px;
+    padding-left: 50px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    border: 1px solid white;
-    box-shadow: 5px 6px 10px  rgba(0, 0, 0, 0.1);
-    padding: 0 10px;
-    font-size: 20px;
     color: gray;
 }
 
-.search-bar:focus{
-    outline: none;
+.search-bar:hover::placeholder{
+    color: gray;
 }
 
-.search-bar::placeholder{
-    font-size: 18px;
-    opacity: 0.5;
+.search-bar:focus {
+  outline: none;
+}
+
+
+.search-bar::placeholder {
+  opacity: 0.5;
+  color: transparent;
+}
+
+.product-container {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }

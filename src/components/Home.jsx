@@ -1,26 +1,32 @@
-import './CSS/Home.css'
+import "./CSS/Home.css";
 
 const Home = () => {
+  return (
+    <>
+      <header>
+        <nav>
+          <p>მთავარი</p>
+          <p>ჩვენს შესახებ</p>
+          <p>სიახლეები</p>
+          <p>კონტაქტი</p>
+        </nav>
+      </header>
 
+      <main>
+        <div className="searchbar-container">
+          <input
+            className="search-bar"
+            type="text"
+            placeholder="შეიყვანეთ საძიებო სიტყვა"
+          />
+        </div>
 
-    return ( 
-        <>
-            <header>
-                <nav>
-                    <p>მთავარი</p>
-                    <p>ჩვენს შესახებ</p>
-                    <p>სიახლეები</p>
-                    <p>კონტაქტი</p>
-                </nav>
-            </header>
+        <div className="product-container">
+            
+        </div>
+      </main>
+    </>
+  );
+};
 
-            <main>
-                <div className='searchbar-container'>
-                    <input className='search-bar' type='text' placeholder='შეიყვანეთ საძიებო სიტყვა' />
-                </div>
-            </main>
-        </>
-     );
-}
- 
 export default Home;
