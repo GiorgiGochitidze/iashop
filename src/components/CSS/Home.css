@@ -115,11 +115,3 @@ nav p:hover:before {
   opacity: 0.5;
   color: transparent;
 }
-
-.product-container {
-    width: 100%;
-    height: 500px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}

@@ -1,4 +1,5 @@
 import "./CSS/Home.css";
+import Products from "./Products";
 
 const Home = () => {
   return (
@@ -6,7 +7,7 @@ const Home = () => {
       <header>
         <nav>
           <p>მთავარი</p>
-          <p>ჩვენს შესახებ</p>
+          <p>კატეგორიები</p>
           <p>სიახლეები</p>
           <p>კონტაქტი</p>
         </nav>
@@ -21,9 +22,7 @@ const Home = () => {
           />
         </div>
 
-        <div className="product-container">
-            
-        </div>
+        <Products />
       </main>
     </>
   );
