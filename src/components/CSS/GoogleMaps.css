@@ -12,3 +12,15 @@
 .google-maps-container iframe{
     border-radius: 20px;
 }
+
+@media screen and (max-width: 620px) {
+
+    .google-maps-container{
+        height: 500px;
+    }
+
+    .google-maps-container iframe{
+        width: 90%;
+        height: 90%;
+    }
+}
