@@ -1,4 +1,5 @@
 import "./CSS/Home.css";
+import GoogleMaps from "./GoogleMaps";
 import Products from "./Products";
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
         </div>
 
         <Products />
+        <GoogleMaps />
       </main>
     </>
   );
