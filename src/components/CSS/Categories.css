@@ -43,6 +43,10 @@
   
   .category-list p {
     cursor: pointer;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
   }
   
   /* Media query for smaller screen sizes */
