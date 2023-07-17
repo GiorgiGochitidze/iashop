@@ -116,3 +116,11 @@ nav p:hover:before {
   opacity: 0.5;
   color: transparent;
 }
+
+.resultnotfound{
+  text-align: center;
+  margin-top: -100px;
+  margin-bottom: 150px;
+  color: gray;
+  opacity: 0.7;
+}
