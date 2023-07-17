@@ -1,7 +1,7 @@
 import './App.css';
 import Categories from './components/Categories';
 import Home from './components/Home';
-import { BrowserRouter as Router,  Route, Routes} from 'react-router-dom';
+import { HashRouter as Router,  Route, Routes} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Cards } from './backend/productscards';
