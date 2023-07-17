@@ -1,31 +1,29 @@
-.category-container{
+.category-container {
     width: 100%;
-    height: auto;
-    /* background-color: red; */
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 0.9fr 3fr;
-    /* margin-block: 20px; */
-    margin-bottom: 70px;
-}
-
-.category-container img{
+    overflow: hidden;
+  }
+  
+  .category-container img {
     width: 90%;
     box-sizing: border-box;
-}
-
-.category-list{
+  }
+  
+  .category-list {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     background: lightgray;
-    margin-left: 20px;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-}
-
-.cards-container{
+    gap: 1rem;
+    padding: 2rem;
+    margin-left: 1rem;
+  }
+  
+  .cards-container {
     width: 100%;
     height: 100%;
     display: grid;
@@ -33,16 +31,23 @@
     justify-items: center;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin-left: 50px;
-}
-
-.category-list p {
+    gap: 2rem;
+    margin: 0 2rem; /* Add left and right margin here */
+  }
+  
+  .category-list p {
     cursor: pointer;
-}
-
-@media screen and (max-width: 1200px) {
-    .cards-container{
-        grid-template-columns: auto;
+  }
+  
+  .footer {
+    margin-top: 2rem;
+  }
+  
+  @media screen and (max-width: 75rem) {
+    /* 1200px in rem units */
+    .cards-container {
+      grid-template-columns: auto;
+      margin: 0 2rem; /* Adjust this value as needed (left and right margin) */
     }
-}
+  }
+  

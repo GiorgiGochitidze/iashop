@@ -1,8 +1,17 @@
 import './CSS/Categories.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from './Footer.jsx'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Categories = ({ filteredCards }) => {
+
+    useEffect(() => {
+        AOS.init({
+          duration: 800
+        });
+      }, []);
+
   const initialCategories = [
     { name: 'ყველა პროდუქტი', active: true },
     { name: 'ქალი', active: false },
@@ -30,7 +39,7 @@ const Categories = ({ filteredCards }) => {
   };
 
   return (
-    <>
+<>
     <div className='category-container'>
       <div className='category-list'>
         <h1 style={{ marginTop: '20px' }}>კატეგორიები</h1>
