@@ -7,7 +7,7 @@ export const Cards = [
     {
         "id": 0,
         "url": `${clothes1}`,
-        "title": 'ფეხსაცმელები ბავშვის',
+        "title": 'ფეხსაცმელები ბავშვი',
         "description": "ბავშვების ფეხსაცმელი",
         "price": "10$"
     },
@@ -15,7 +15,7 @@ export const Cards = [
     {
         "id": 1,
         "url": `${clothes2}`,
-        "title": 'ტანსაცმელები ზრდასრული',
+        "title": 'ტანსაცმელები ქალი',
         "description": "ზრდასრულების ტანსაცმელი",
         "price": "20$"
     },
@@ -23,8 +23,8 @@ export const Cards = [
     {
         "id": 2,
         "url": `${clothes3}`,
-        "title": 'ტანსაცმელები ზრდასრული',
-        "description": "ქალების ტანსაცმელი",
+        "title": 'ტანსაცმელები მამაკაცი',
+        "description": "მამაკაცების ტანსაცმელი",
         "price": "15$"
     },
 ]

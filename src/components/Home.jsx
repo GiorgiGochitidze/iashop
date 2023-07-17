@@ -8,17 +8,7 @@ import ProductsCard from "./ProductsCard";
 
 
 
-const Home = () => {
-
-  const [inputValue, setInputValue] = useState('');
-
-  // filter for searchbar apologizes on cards title and description
-  const filteredCards = inputValue
-    ? Cards.filter((card) =>
-        card.title.toLowerCase().includes(inputValue.toLowerCase()) ||
-        card.description.toLowerCase().includes(inputValue.toLowerCase())
-      )
-    : Cards;
+const Home = ({filteredCards, inputValue, setInputValue}) => {
 
   const handleChangeInput = (e) => {
     setInputValue(e.target.value);
