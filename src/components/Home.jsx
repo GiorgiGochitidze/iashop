@@ -12,8 +12,10 @@ const Home = () => {
 
   const [inputValue, setInputValue] = useState('');
 
+  // filter for searchbar apologizes on cards title and description
   const filteredCards = inputValue
     ? Cards.filter((card) =>
+        card.title.toLowerCase().includes(inputValue.toLowerCase()) ||
         card.description.toLowerCase().includes(inputValue.toLowerCase())
       )
     : Cards;
@@ -24,14 +26,6 @@ const Home = () => {
 
   return (
     <>
-      <header>
-        <nav>
-          <p>მთავარი</p>
-          <p>კატეგორიები</p>
-          <p>სიახლეები</p>
-          <p>კონტაქტი</p>
-        </nav>
-      </header>
 
       <main>
         <div className="searchbar-container">
@@ -44,6 +38,7 @@ const Home = () => {
           />
         </div>
         
+        {/* a code wich generating text result not found if in searchbar not matched words wich contain cards title or description */}
         {filteredCards.length === 0 ? (
           <p className="resultnotfound">შედეგები ვერ მოიძებნა</p>
         ) : filteredCards.length === 1 ? (
