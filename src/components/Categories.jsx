@@ -110,6 +110,7 @@ const Categories = ({ filteredCards }) => {
   const [selectedCategory, setSelectedCategory] = useState("ყველა პროდუქტი");
   const [showSubcategories, setShowSubcategories] = useState(true);
 
+  //accepting this function to check wich part of categories is active
   const handleCheckActive = (categoryName) => {
     setSelectedCategory(categoryName);
     const updatedCategories = categories.map((category) => ({
@@ -173,7 +174,7 @@ const Categories = ({ filteredCards }) => {
               data-aos="fade-up"
               className="product-card"
             >
-              <img src={card.url} alt="clothes image number 1" />
+              <img src={card.url} alt="clothes image number 1" width="280px" height="180px" />
               <h4 style={{ textAlign: "center" }}>{card.title}</h4>
               <br />
               <p>{card.description}</p>

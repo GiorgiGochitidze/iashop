@@ -11,12 +11,7 @@
     grid-template-columns: 0.9fr 3fr;
     overflow: hidden;
   }
-  
-  .category-container img {
-    width: 90%;
-    box-sizing: border-box;
-  }
-  
+
   .category-list {
     width: 100%;
     height: 100%;
