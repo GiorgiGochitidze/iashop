@@ -120,8 +120,8 @@ export const Cards = [
     {
         "id": 12,
         "url": `${shoes10}`,
-        "title": 'ტანსაცმელები მამაკაცი',
-        "description": "მამაკაცების ტანსაცმელი",
+        "title": 'ფეხსაცმელი ქალი',
+        "description": "ქალის ფეხსაცმელი",
         "price": "15$"
     },
 

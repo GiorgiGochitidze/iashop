@@ -25,6 +25,7 @@ const Categories = ({ filteredCards }) => {
         "ბლუზი",
         "ჯემპრი",
         "ჟაკეტი",
+        "ფეხსაცმელი",
         "ქურთუკი",
         "ჟილეტი",
         "პიჯაკი",
@@ -64,9 +65,10 @@ const Categories = ({ filteredCards }) => {
         "ფეხსაცმლის მაშველი",
       ],
     },
-    { name: "ბავშვი: ბიჭი",
-     active: false,
-     subcategories: [
+    {
+      name: "ბავშვი: ბიჭი",
+      active: false,
+      subcategories: [
         "ჯინსი",
         "შარვალი",
         "შორტი",
@@ -81,11 +83,13 @@ const Categories = ({ filteredCards }) => {
         "თეთრეული",
         "საცურაო კოსტუმი",
         "ბავშვის ბოდე",
-        ] },
+      ],
+    },
 
-        { name: "ბავშვი: გოგო",
-     active: false,
-     subcategories: [
+    {
+      name: "ბავშვი: გოგო",
+      active: false,
+      subcategories: [
         "ჯინსი",
         "შარვალი",
         "შორტი",
@@ -103,33 +107,41 @@ const Categories = ({ filteredCards }) => {
         "თეთრეული",
         "საცურაო კოსტუმი",
         "ბავშვის ბოდე",
-        ] },
+      ],
+    },
   ];
 
   const [categories, setCategories] = useState(initialCategories);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [showSubcategories, setShowSubcategories] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState("ყველა პროდუქტი");
+  const [showSubcategoryList, setShowSubcategoryList] = useState(false);
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
 
-  const handleCheckActive = (categoryName) => {
-    setSelectedCategory(categoryName);
-  
-    // Toggle showSubcategories state when the same category is clicked again
-    if (selectedCategory === categoryName) {
-      setShowSubcategories((prevShowSubcategories) => !prevShowSubcategories);
+  const handleCheckActive = (categoryName, subcategoryName) => {
+    if (subcategoryName) {
+      setSelectedSubcategory(subcategoryName);
     } else {
-      setShowSubcategories(true); // Show submenu for the newly clicked category
+      setSelectedCategory(categoryName);
+      setShowSubcategoryList(true);
+      setSelectedSubcategory(null);
     }
   };
 
-  const filterCardsByCategory = (categoryName) => {
+  const filterCardsByCategory = (categoryName, subcategoryName) => {
     if (categoryName === "ყველა პროდუქტი") {
       return filteredCards;
     }
-    return filteredCards.filter((card) => card.title.includes(categoryName));
+
+    return filteredCards.filter((card) => {
+      const hasCategory = card.title.includes(categoryName);
+      const hasSubcategory =
+        card.title.includes(subcategoryName) ||
+        card.description.includes(subcategoryName);
+      return hasCategory && hasSubcategory;
+    });
   };
-    
-    return (
-      <>
+
+  return (
+    <>
       <div className="category-container">
         <div className="category-list">
           <h1 style={{ marginTop: "20px" }}>კატეგორიები</h1>
@@ -140,48 +152,90 @@ const Categories = ({ filteredCards }) => {
               <p
                 onClick={() => handleCheckActive(category.name)}
                 style={{
-                  color: selectedCategory === category.name ? "rgb(188, 35, 188)" : "black",
+                  color:
+                    selectedCategory === category.name
+                      ? "rgb(188, 35, 188)"
+                      : "black",
+                  fontWeight:
+                    selectedCategory === category.name ? "bold" : "normal",
                 }}
               >
                 {category.name}
               </p>
-              {selectedCategory === category.name && category.subcategories.length > 0 && (
-                <div style={{ marginLeft: "20px" }}>
-                  {category.subcategories.map((subcategory, subIndex) => (
-                    <p
-                      style={{
-                        textAlign: "center",
-                        color: selectedCategory === subcategory ? "rgb(188, 35, 188)" : "black",
-                      }}
-                      key={subIndex}
-                      onClick={() => handleCheckActive(subcategory)}
-                    >
-                      {subcategory}
-                    </p>
-                  ))}
-                </div>
-              )}
+              {selectedCategory === category.name &&
+                category.subcategories.length > 0 && (
+                  <div style={{ marginLeft: "20px" }}>
+                    {category.subcategories.map((subcategory, subIndex) => (
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color:
+                            selectedCategory === category.name &&
+                            selectedSubcategory === subcategory
+                              ? "rgb(220, 74, 220)" // Color for selected subcategory
+                              : "black",
+                          fontWeight:
+                            selectedCategory === category.name &&
+                            selectedSubcategory === subcategory
+                              ? "bold" // Font weight for selected subcategory
+                              : "normal",
+                        }}
+                        key={subIndex}
+                        onClick={() =>
+                          handleCheckActive(category.name, subcategory)
+                        }
+                      >
+                        {subcategory}
+                      </p>
+                    ))}
+                  </div>
+                )}
             </React.Fragment>
           ))}
         </div>
 
         <div className="cards-container">
-          {selectedCategory && (
-            filterCardsByCategory(selectedCategory).map((card) => (
-              <div
-                style={{ margin: "0 auto" }}
-                key={card.id}
-                className="product-card"
-              >
-                <img src={card.url} alt="clothes image number 1" width="280px" height="180px" />
-                <h4 style={{ textAlign: "center" }}>{card.title}</h4>
-                <br />
-                <p>{card.description}</p>
-                <br />
-                <p>{card.price}</p>
-              </div>
-            ))
-          )}
+          {selectedCategory
+            ? filterCardsByCategory(selectedCategory, selectedSubcategory).map(
+                (card) => (
+                  <div
+                    style={{ margin: "0 auto" }}
+                    key={card.id}
+                    className="product-card"
+                  >
+                    <img
+                      src={card.url}
+                      alt="clothes image number 1"
+                      width="280px"
+                      height="180px"
+                    />
+                    <h4 style={{ textAlign: "center" }}>{card.title}</h4>
+                    <br />
+                    <p>{card.description}</p>
+                    <br />
+                    <p>{card.price}</p>
+                  </div>
+                )
+              )
+            : filteredCards.map((card) => (
+                <div
+                  style={{ margin: "0 auto" }}
+                  key={card.id}
+                  className="product-card"
+                >
+                  <img
+                    src={card.url}
+                    alt="clothes image number 1"
+                    width="280px"
+                    height="180px"
+                  />
+                  <h4 style={{ textAlign: "center" }}>{card.title}</h4>
+                  <br />
+                  <p>{card.description}</p>
+                  <br />
+                  <p>{card.price}</p>
+                </div>
+              ))}
         </div>
       </div>
       <Footer />
