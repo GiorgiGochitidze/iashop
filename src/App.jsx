@@ -36,10 +36,10 @@ function App() {
 
         {headermenu && 
         <div className="menubar">
-          <Link style={{color: 'black'}} className="linksfixing" to='/'>მთავარი</Link>
-          <Link style={{color: 'black'}} className="linksfixing" to='/Categories'>კატეგორიები</Link>
-          <Link style={{color: 'black'}} className="linksfixing" to='/NewProducts'>ახალი პროდუქტები</Link>
-          <Link style={{color: 'black'}} className="linksfixing" to='/Contact'>კონტაქტი</Link>
+          <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/'>მთავარი</Link>
+          <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/Categories'>კატეგორიები</Link>
+          <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/NewProducts'>ახალი პროდუქტები</Link>
+          <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/Contact'>კონტაქტი</Link>
         </div>
         }
       </header>
