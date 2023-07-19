@@ -1,121 +1,120 @@
 /* Footer styles */
 .footer {
-    margin-top: 2rem; /* Use rem instead of px for consistent spacing */
+  margin-top: 16px; /* Use px instead of rem for consistent spacing */
+}
+
+/* Category container styles */
+.category-container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow: hidden;
+}
+
+.category-list {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background: lightgray;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 32px; /* Changed from 2rem to 32px */
+  margin-left: 16px; /* Changed from 1rem to 16px */
+  margin-right: 16px; /* Changed from 1rem to 16px */
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-container {
+  width: 100%;
+  height: 820px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 32px; /* Changed from 2rem to 32px */
+  overflow-y: auto;
+}
+
+.category-list p {
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.productses-card {
+  width: 350px;
+  max-width: 350px;
+  height: 380px;
+  background-color: #efefef;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.productses-card img {
+  width: 80%;
+  height: 188px;
+  display: flex;
+  margin: 50px auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Media query for smaller screen sizes */
+@media screen and (max-width: 1200px) {
+  /* Changed from 75rem to 1200px */
+  .cards-container {
+    grid-template-columns: auto;
   }
-  
-  /* Category container styles */
+}
+
+@media screen and (max-width: 810px) {
   .category-container {
-    width: 100%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: auto auto;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
 
   .category-list {
-    width: 300px;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    background: lightgray;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    text-align: center;
+    width: 90%;
+    padding: 0;
+    height: 90px;
+    margin: auto;
+    overflow: hidden;
+    transition: all 1s ease;
+    border-radius: 20px;
   }
 
-  .cards-container::-webkit-scrollbar{
-    display: none;
-  }
-  
-  .cards-container {
-    width: 100%;
-    height: 820px;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  .category-list:hover {
+    height: 600px;
     overflow-y: auto;
   }
-  
+
+  .category-list:hover::-webkit-scrollbar {
+    display: none;
+  }
+
   .category-list p {
-    cursor: pointer;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
+    display: block;
+    /* Optional: Add margin to space out the items vertically */
+    margin: 10px 0;
   }
+}
 
-  .productses-card{
-    width: 350px;
-    max-width: 350px;
-    height: 380px;
-    background-color: #efefef;
-    text-align: center;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-top: 25px;
+@media screen and (max-width: 420px) {
+  .productses-card {
+    width: 85%;
   }
-
-  .productses-card img{
-    width: 80%;
-    height: 188px;
-    display: flex;
-    margin: 50px auto;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    object-fit: cover;
-  }
-  
-  /* Media query for smaller screen sizes */
-  @media screen and (max-width: 75rem) {
-    /* 1200px in rem units */
-    .cards-container {
-      grid-template-columns: auto;
-    }
-  }
-  
-  @media screen and (max-width: 810px) {
-    .category-container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .category-list {
-      text-align: center;
-      width: 90%;
-      padding: 0;
-      height: 90px;
-      margin: auto;
-      overflow: hidden;
-      transition: all 1s ease;
-      border-radius: 20px;
-    }
-
-    .category-list:hover{
-      height: 600px;
-      overflow-y: auto;
-    }
-
-    .category-list:hover::-webkit-scrollbar{
-      display: none;
-    }
-  
-    .category-list p {
-      display: block;
-      /* Optional: Add margin to space out the items vertically */
-      margin: 10px 0;
-    }
-  }
-  
-
-  @media screen and (max-width: 420px) {
-    .productses-card{
-      width: 85%;
-    }
-  }
+}
