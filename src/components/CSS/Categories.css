@@ -6,7 +6,7 @@
 /* Category container styles */
 .category-container {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 300px); /* Calculate available height - footer height */
   display: grid;
   grid-template-columns: auto auto;
   overflow: hidden;
@@ -31,7 +31,6 @@
 
 .cards-container {
   width: 100%;
-  height: 820px;
   display: grid;
   grid-template-columns: auto auto;
   justify-items: center;
