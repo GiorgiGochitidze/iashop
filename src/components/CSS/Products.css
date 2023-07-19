@@ -1,12 +1,19 @@
 .product-container {
     width: 100%;
-    height: auto;
+    height: 420px;
     display: grid;
     justify-items: center;
     align-items: center;
     /* background-color: rebeccapurple; */
     grid-template-columns: auto auto auto;
     margin-bottom: 50px;
+    overflow-y: auto;
+    border-radius: 20px;
+    background-color: #d1d1d1;
+}
+
+.product-container::-webkit-scrollbar{
+    background-color: transparent;
 }
 
 .product-card{
