@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 function App() {
 
   const [inputValue, setInputValue] = useState('');
+  const [headermenu, setHeadermenu] = useState(false)
 
   // filter for searchbar apologizes on cards title and description
   const filteredCards = inputValue
@@ -26,11 +27,21 @@ function App() {
 
       <header>
         <nav>
+          <h3 onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)}>Menu</h3>
           <Link className="linksfix" to='/'><p>მთავარი</p></Link>
           <Link className="linksfix" to='/Categories'><p>კატეგორიები</p></Link>
           <Link className="linksfix" to='/NewProducts'><p>ახალი პროდუქტები</p></Link>
           <Link className="linksfix" to='/Contact'><p>კონტაქტი</p></Link>
         </nav>
+
+        {headermenu && 
+        <div className="menubar">
+          <Link style={{color: 'black'}} className="linksfixing" to='/'>მთავარი</Link>
+          <Link style={{color: 'black'}} className="linksfixing" to='/Categories'>კატეგორიები</Link>
+          <Link style={{color: 'black'}} className="linksfixing" to='/NewProducts'>ახალი პროდუქტები</Link>
+          <Link style={{color: 'black'}} className="linksfixing" to='/Contact'>კონტაქტი</Link>
+        </div>
+        }
       </header>
 
         <Routes>

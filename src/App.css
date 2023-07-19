@@ -6,3 +6,17 @@
 .linksfix{
   text-decoration: none;
 }
+
+.linksfixing{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.linksfixing:hover{
+  background: #dbdada;
+}
