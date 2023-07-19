@@ -26,7 +26,8 @@ export const Cards = [
         "url": `${clothes1}`,
         "title": 'ფეხსაცმელები ბავშვი',
         "description": "ბავშვების ფეხსაცმელი",
-        "price": "10$"
+        "price": "10$",
+        "new": false
     },
 
     {
@@ -34,7 +35,8 @@ export const Cards = [
         "url": `${clothes2}`,
         "title": 'ტანსაცმელები ქალი',
         "description": "ზრდასრულების ტანსაცმელი",
-        "price": "20$"
+        "price": "20$",
+        "new": false
     },
 
     {
@@ -42,7 +44,8 @@ export const Cards = [
         "url": `${clothes3}`,
         "title": 'ტანსაცმელები მამაკაცი',
         "description": "ქალების ფეხსაცმელები",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -50,7 +53,8 @@ export const Cards = [
         "url": `${shoes1}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალის ფეხსაცმელები",
-        "price": "15$"
+        "price": "15$",
+        "new": true
     },
     
     {
@@ -58,7 +62,8 @@ export const Cards = [
         "url": `${shoes2}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -66,7 +71,8 @@ export const Cards = [
         "url": `${shoes3}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალის ფეხსაცმელები",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -74,7 +80,8 @@ export const Cards = [
         "url": `${shoes4}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -82,7 +89,8 @@ export const Cards = [
         "url": `${shoes5}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": true
     },
 
     {
@@ -90,7 +98,8 @@ export const Cards = [
         "url": `${shoes6}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": true
     },
 
     {
@@ -98,7 +107,8 @@ export const Cards = [
         "url": `${shoes7}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": true
     },
 
     {
@@ -106,7 +116,8 @@ export const Cards = [
         "url": `${shoes8}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": true
     },
 
     {
@@ -114,7 +125,8 @@ export const Cards = [
         "url": `${shoes9}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": true
     },
 
     {
@@ -122,7 +134,8 @@ export const Cards = [
         "url": `${shoes10}`,
         "title": 'ფეხსაცმელი ქალი',
         "description": "ქალის ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -130,7 +143,8 @@ export const Cards = [
         "url": `${shoes11}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": true
     },
 
     {
@@ -138,7 +152,8 @@ export const Cards = [
         "url": `${shoes12}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -146,7 +161,8 @@ export const Cards = [
         "url": `${shoes13}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -154,7 +170,8 @@ export const Cards = [
         "url": `${shoes14}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -162,7 +179,8 @@ export const Cards = [
         "url": `${shoes15}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -170,7 +188,8 @@ export const Cards = [
         "url": `${shoes16}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 
     {
@@ -178,6 +197,7 @@ export const Cards = [
         "url": `${shoes17}`,
         "title": 'ფეხსაცმელები ქალის',
         "description": "ქალების ფეხსაცმელი",
-        "price": "15$"
+        "price": "15$",
+        "new": false
     },
 ]
