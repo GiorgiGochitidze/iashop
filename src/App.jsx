@@ -5,6 +5,7 @@ import { HashRouter as Router,  Route, Routes} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Cards } from './backend/productscards';
+import ComingSoon from './components/ComingSoon';
 
 function App() {
 
@@ -25,14 +26,15 @@ function App() {
         <nav>
           <Link className="linksfix" to='/'><p>მთავარი</p></Link>
           <Link className="linksfix" to='/Categories'><p>კატეგორიები</p></Link>
-          <p>სიახლეები</p>
-          <p>კონტაქტი</p>
+          <Link className="linksfix" to='/ComingSoon'><p>ახალი პროდუქტები</p></Link>
+          <Link className="linksfix" to='/ComingSoon'><p>კონტაქტი</p></Link>
         </nav>
       </header>
 
         <Routes>
           <Route exact path="/" element={<Home filteredCards={filteredCards} inputValue={inputValue} setInputValue={setInputValue} />} />
           <Route exact path="/Categories" element={<Categories filteredCards={filteredCards} />} />
+          <Route exact path="/ComingSoon" element={<ComingSoon />} />
         </Routes>
     </>
   );
