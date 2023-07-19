@@ -8,6 +8,7 @@
     margin-bottom: 50px;
     overflow-y: auto;
     border-radius: 20px;
+    padding: 0;
     /* background-color: #d1d1d1; */
 }
 
@@ -50,14 +51,13 @@
 @media screen and (max-width: 750px) {
     .product-container{
         grid-template-columns: auto;
+        padding: 0;
+        
     }
 }
 
 @media screen and (max-width: 380px) {
     .product-card {
         width: 95%;
-        height: auto;
-        margin-bottom: 360px;
-      }
-      
+    }
 }

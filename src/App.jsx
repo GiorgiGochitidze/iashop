@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { Cards } from './backend/productscards';
 import ComingSoon from './components/ComingSoon';
 import NewProducts from './components/NewProducts';
+import Contact from './components/Contact';
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
           <Link className="linksfix" to='/'><p>მთავარი</p></Link>
           <Link className="linksfix" to='/Categories'><p>კატეგორიები</p></Link>
           <Link className="linksfix" to='/NewProducts'><p>ახალი პროდუქტები</p></Link>
-          <Link className="linksfix" to='/ComingSoon'><p>კონტაქტი</p></Link>
+          <Link className="linksfix" to='/Contact'><p>კონტაქტი</p></Link>
         </nav>
       </header>
 
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/" element={<Home filteredCards={filteredCards} inputValue={inputValue} setInputValue={setInputValue} />} />
           <Route exact path="/Categories" element={<Categories filteredCards={filteredCards} />} />
           <Route exact path="/NewProducts" element={<NewProducts />} />
+          <Route exact path="/Contact" element={<Contact />} />
           <Route exact path="/ComingSoon" element={<ComingSoon />} />
         </Routes>
     </>

@@ -157,6 +157,7 @@ const Categories = ({ filteredCards }) => {
                       : "black",
                   fontWeight:
                     selectedCategory === category.name ? "bold" : "normal",
+
                 }}
               >
                 {category.name}
@@ -200,7 +201,7 @@ const Categories = ({ filteredCards }) => {
                   <div
                     style={{ margin: "0 auto" }}
                     key={card.id}
-                    className="product-card"
+                    className="productses-card"
                   >
                     <img
                       src={card.url}
