@@ -2,7 +2,7 @@
   "name": "iashop",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,11 +12,12 @@
   "dependencies": {
     "aos": "^2.3.4",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "hosted-git-info": "^1.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.1",
-    "hosted-git-info": "^1.2.3"    
+    "react-router-dom": "^6.14.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

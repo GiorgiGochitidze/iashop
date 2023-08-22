@@ -8,6 +8,7 @@ import { Cards } from './backend/productscards';
 import ComingSoon from './components/ComingSoon';
 import NewProducts from './components/NewProducts';
 import Contact from './components/Contact';
+import Registration from './components/Registration';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Link className="linksfix" to='/Categories'><p>კატეგორიები</p></Link>
           <Link className="linksfix" to='/NewProducts'><p>ახალი პროდუქტები</p></Link>
           <Link className="linksfix" to='/Contact'><p>კონტაქტი</p></Link>
+          <Link className="linksfix" to='/Registration'><p>რეგისტრაცია</p></Link>
         </nav>
 
         {headermenu && 
@@ -40,6 +42,7 @@ function App() {
           <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/Categories'>კატეგორიები</Link>
           <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/NewProducts'>ახალი პროდუქტები</Link>
           <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/Contact'>კონტაქტი</Link>
+          <Link onClick={() => headermenu ? setHeadermenu(false) : setHeadermenu(true)} style={{color: 'black'}} className="linksfixing" to='/Registration'><p>რეგისტრაცია</p></Link>
         </div>
         }
       </header>
@@ -49,6 +52,7 @@ function App() {
           <Route exact path="/Categories" element={<Categories filteredCards={filteredCards} />} />
           <Route exact path="/NewProducts" element={<NewProducts />} />
           <Route exact path="/Contact" element={<Contact />} />
+          <Route exact path="/Registration" element={<Registration />} />
           <Route exact path="/ComingSoon" element={<ComingSoon />} />
         </Routes>
     </>

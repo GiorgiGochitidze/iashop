@@ -1,15 +1,27 @@
 const express = require('express');
-const cookieParser = require('cookie-parser');
-
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
-app.use(cookieParser());
+const port = process.env.PORT || 5000;
 
-app.get('/', (req, res) => {
-  // Set a cookie with SameSite=None and Secure attributes
-  res.cookie('myCookie', 'cookieValue', { sameSite: 'none', secure: true });
-  res.send('Hello World!');
+app.use(bodyParser.json());
+app.use(cors());
+
+app.post('/', (req, res) => {
+  const { firstName, lastName, email, password } = req.body;
+
+  // Here you can process the registration data, e.g., save to a database
+  // For this example, let's just log the received data
+  console.log('Received registration data:', {
+    firstName,
+    lastName,
+    email,
+    password
+  });
+
+  res.status(200).json({ message: 'Registration successful' });
 });
 
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
 });
